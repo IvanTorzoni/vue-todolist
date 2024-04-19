@@ -24,7 +24,7 @@
         </div>
         <div class="tasks">
               <ul class="inner-list">
-                <li class="done" v-for="todoItem in todoList">
+                <li :class="{'done' : todoItem.done === true }"  v-for="todoItem in todoList">
                   <span class="circle checked">{{ todoItem.text }}</span>
                 </li>
               </ul>

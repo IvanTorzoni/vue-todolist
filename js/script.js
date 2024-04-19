@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        done: true,
         todoList: [
             {
                 text: "Recruiting blog post",
