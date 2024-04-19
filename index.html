@@ -24,18 +24,8 @@
         </div>
         <div class="tasks">
               <ul class="inner-list">
-                <li class="done">
-                  <span class="circle checked"></span>Recruiting blog post
-                </li>
-                <li class="done">
-                  <span class="circle checked"></span>Mobile app luaunch
-                </li>
-                <li>
-                  <span class="circle delete"></span>Interview John H.
-                </li>
-                <li class="done">
-                  <span class="circle checked"></span>Summit update to mobile
-                  storefronts 
+                <li class="done" v-for="todoItem in todoList">
+                  <span class="circle checked">{{ todoItem.text }}</span>
                 </li>
               </ul>
             </li>
