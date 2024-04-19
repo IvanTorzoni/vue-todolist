@@ -8,7 +8,8 @@ createApp({
                 text: "",
                 done: false
             },
-            done: 'done',
+            checked: "checked",
+            delete: "delete",
             todoList: [
                 {
                     text: "Recruiting blog post",
@@ -40,5 +41,12 @@ createApp({
             this.todoList.push(copyToDo);
             this.newToDo.text = ""
         },
+        invertClass: function(index) {
+            if (this.todoList[index].done === false) {
+                this.todoList[index].done = true;
+            } else {
+                this.todoList[index].done = false
+            }
+        }
     },
 }).mount('#app')

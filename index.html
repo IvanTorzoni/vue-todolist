@@ -24,8 +24,8 @@
         </div>
         <div class="tasks">
               <ul class="inner-list">
-                <li :class="{'done' : todoItem.done === true }"  v-for="todoItem in todoList">
-                  <span class="circle checked">{{ todoItem.text }}</span>
+                <li :class="{'done' : todoItem.done === true }" @click="invertClass(index)" v-for="todoItem, index in todoList">
+                  <span :class="{'checked' : todoItem.done === true},{'delete' : todoItem.done === false}" class="circle">{{ todoItem.text }}</span>
                 </li>
               </ul>
             </li>
