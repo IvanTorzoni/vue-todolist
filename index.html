@@ -19,7 +19,7 @@
     <main>
       <div class="container" id="app">
         <div class="top">
-          <input type="text" v-model="newToDo.text" placeholder="es: Fare la spesa..." />
+          <input type="text" v-model="newToDo.text" @keyup.enter="submit" placeholder="es: Fare la spesa..." />
           <button type="button" class="btn btn-filled" @click="addToDo">Add Task</button>
         </div>
         <div class="tasks">
