@@ -3,7 +3,12 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        done: true,
+        newToDo: 
+            {
+                text: "",
+                done: false
+            }, 
+        done: 'done',
         todoList: [
             {
                 text: "Recruiting blog post",
@@ -23,5 +28,11 @@ createApp({
             },
         ]
     }
-  }
+  },
+  methods: {
+    addToDo: function () {
+        const copyToDo = { ...this.newToDo };
+        this.todoList.push(copyToDo);
+        this.newToDo.text = ""
+  }}
 }).mount('#app')
